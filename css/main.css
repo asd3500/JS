@@ -133,4 +133,55 @@ body {
     display: none;
   }
 }
+
+.display-none {
+  display: none;
+}
+
+.to-do-list {
+  width: 70%;
+  margin: 100px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.to-do-list__input {
+  width: 100%;
+}
+
+.to-do-list__item {
+  width: 100%;
+  position: relative;
+  min-height: 30px;
+  margin: 5px 0 0 0;
+}
+
+.to-do-list__checkbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.to-do-list__delete {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.to-do-list__text {
+  margin: 0 20px 0 20px;
+  min-height: 30px;
+}
 /*# sourceMappingURL=main.css.map */
