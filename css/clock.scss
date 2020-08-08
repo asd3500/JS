@@ -1,0 +1,98 @@
+$clock-size: 100px;
+$hour-arrow-length: $clock-size/3;
+$min-arrow-length: 2*$clock-size/5;
+$sec-arrow-length: $clock-size/2-2px;
+
+.clock {
+    // margin: 0;
+    // background-color: red;
+    &__date {
+        width: $clock-size + 40px;
+        height: 40px;
+        background-color: red;
+        color: white;
+        border-radius: 0 0 0 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 15px;
+        line-height: 40px;
+    }
+    &__panel {
+        margin: 10px 0 10px 20px;
+        width: $clock-size;
+        height: $clock-size;
+        border: 5px solid red;
+        border-radius: 50%;
+        z-index: 3;
+        position: relative;
+    }
+    &__pin {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: red;
+        display: flex;
+        &::after {
+            font-family: Arial, Helvetica, sans-serif;
+            content: "JS";
+            color: white;
+            margin: auto;
+        }
+    }
+    &__scale, &__arrow {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        width: $clock-size;
+        height: 0;
+        &::after {
+            content: "";
+            margin-left: -1px;
+            width: 5px;
+            height: 5px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            background: red;
+            display: block;
+            
+        }
+    }
+    &__arrow_hour::after {
+        margin-left: $clock-size/2-$hour-arrow-length;
+        width: $hour-arrow-length;
+        height: 6px;
+        background-color: #c80000;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: translateY(-3px);
+    }
+    &__arrow_min::after {
+        margin-left: $clock-size/2-$min-arrow-length;
+        width: $min-arrow-length;
+        height: 4px;
+        background-color: #e60000;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: translateY(-2px);
+    }
+    &__arrow_sec::after {
+        margin-left: $clock-size/2-$sec-arrow-length;
+        width: $sec-arrow-length;
+        height: 1px;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        background-color: red;
+    }
+}
