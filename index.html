@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>codew</title>
+    <title>git-js</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/clock.css">
 </head>
@@ -36,6 +36,14 @@
             </div>
         </div>
     </div>
+    <form id="signIn">
+        <label for="login">login</label><br>
+        <input type="text" id="login"><br>
+        <label for="password">password</label><br>
+        <input type="text" id="password"><br>
+        <button>login</button>
+        <button id="registration">reg</button>
+    </form>
     <div class="to-do-list">
         <input type="text" class="to-do-list__input" placeholder="input a task">
         <div class="to-do-list__item display-none">
@@ -44,6 +52,7 @@
             <div class="to-do-list__text"></div>
         </div>
     </div>
+    <script src="./script/signin.js"></script>
     <script src="./script/to-do.js"></script>
     <script src="./script/clock.js"></script>
     <script>let stime = new Date()</script>
